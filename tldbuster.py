@@ -16,7 +16,7 @@ def check_ping(url):
 
     return pingstatus
 
-domain=raw_input("Enter Host Name")
+domain=raw_input("Enter Host Name :- ")
 
 for i in (data):
     response=check_ping(domain+i[0])
