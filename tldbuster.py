@@ -8,12 +8,14 @@ def check_ping(url):
     response = os.system("ping -c 1 " + url)
     if response == 0:
         pingstatus = "Network Active"
-        a = open('url.txt', 'a')
+        a = open('urls.txt', 'a')
         a.write(domain+i[0] + "\n")
         a.close()
     else:
         pingstatus = "Network Error"
-
+        a = open('urlsnotfound.txt', 'a')
+        a.write(domain+i[0] + "\n")
+        a.close()
     return pingstatus
 
 domain=raw_input("Enter Host Name :- ")
